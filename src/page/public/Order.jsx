@@ -221,7 +221,7 @@ const Order = () => {
 
           position: "relative",
           width: "100vw",
-          height: { xs: "300px", md: "350px" },
+          height: { xs: "300px", md: "400px" },
           backgroundImage: `url(${contactBanner})`,
           backgroundSize: "cover",
           backgroundPosition: "center right",

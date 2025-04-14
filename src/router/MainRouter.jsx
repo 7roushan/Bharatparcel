@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PublicRouter from "./routes/PublicRouter";
+import PublicRouter from "./routes/PublicRouter"; // ← Import this
 
 // Public Pages
 import Home from "../page/public/Home";
@@ -10,20 +10,26 @@ import Employer from "../page/public/Employer";
 import Ites from "../page/public/Ites";
 import Services from "../page/public/Services";
 import ServiceDetails from "../page/public/ServiceDetails";
+import ScrollToTopLayout from "../components/ScrollToTopLayout";
 
 const routers = createBrowserRouter([
   {
     path: "/",
     element: <PublicRouter />,
     children: [
-      { path: "", index: true, element: <Home /> },
-      { path: "about", element: <About /> },
-      { path: "career", element: <Career /> },
-      { path: "contact", element: <Contact /> },
-      { path: "employer", element: <Employer /> },
-      { path: "ites", element: <Ites /> },
-      { path: "services", element: <Services /> },
-      { path: "services/:id", element: <ServiceDetails /> },
+      {
+        element: <ScrollToTopLayout />, // ← Wrap in scroll-to-top layout
+        children: [
+          { index: true, element: <Home /> },
+          { path: "about", element: <About /> },
+          { path: "career", element: <Career /> },
+          { path: "contact", element: <Contact /> },
+          { path: "employer", element: <Employer /> },
+          { path: "ites", element: <Ites /> },
+          { path: "services", element: <Services /> },
+          { path: "services/:id", element: <ServiceDetails /> },
+        ],
+      },
     ],
   },
 ]);

@@ -381,7 +381,7 @@ const Contact = () => {
         sx={{
           position: "relative",
           width: "100vw",
-          height: { xs: "60vh", md: "80vh" },
+          height: { xs: "300px", md: "400px" },
           backgroundImage: `url(${contactBanner})`,
           backgroundSize: "cover",
           backgroundPosition: " center left",
