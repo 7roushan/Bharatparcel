@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import {
 //   Box,
@@ -214,7 +213,6 @@
 
 // export default LandingPage;
 
-
 import React from "react";
 import {
   Box,
@@ -247,9 +245,9 @@ function LandingPage() {
         backgroundPosition: "center",
         backgroundColor: "#194493",
         color: "white",
-        pl: { xs: 2, sm: 4, md: 10 , lg:16 },
-        pr: { xs: 2, sm: 2, md: 0 , lg:0 },
-        py: { xs: 4, md: 8 },
+        pl: { xs: 2, sm: 4, md: 10, lg: 16 },
+        pr: { xs: 2, sm: 2, md: 0, lg: 0 },
+        py: { xs:6, md: 8 },
       }}
     >
       <Grid container spacing={5} alignItems="center">
@@ -259,6 +257,7 @@ function LandingPage() {
             sx={{
               animation: `${fadeIn} 2s ease-out`,
               textAlign: { xs: "center", md: "left" },
+              
             }}
           >
             <Typography
@@ -268,12 +267,16 @@ function LandingPage() {
                 fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
                 textShadow: "4px 4px 8px rgba(0,0,0,0.6)",
                 mb: 3,
+                 mt: { xs: 5 },
                 background: "linear-gradient(45deg, #e8ec14 30%, #d0f916 90%)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
               }}
             >
-              <Typography component="span" sx={{ color: "blueviolet", fontWeight: 900 }}>
+              <Typography
+                component="span"
+                sx={{  color: "blueviolet", fontWeight: 900 }}
+              >
                 BHARAT Parcel
               </Typography>
               <br />
@@ -291,7 +294,8 @@ function LandingPage() {
                 letterSpacing: "0.03em",
               }}
             >
-              Your parcel's whereabouts at your fingertips, delivering peace of mind with every shipment.
+              Your parcel's whereabouts at your fingertips, delivering peace of
+              mind with every shipment.
             </Typography>
 
             {/* Input + Button */}
@@ -342,7 +346,8 @@ function LandingPage() {
                   borderRadius: "50px",
                   fontSize: "0.9rem",
                   fontWeight: 700,
-                  background: "linear-gradient(45deg, #ffd700 30%, #ffea00 90%)",
+                  background:
+                    "linear-gradient(45deg, #ffd700 30%, #ffea00 90%)",
                   color: "#1a237e",
                   textTransform: "uppercase",
                   letterSpacing: "1px",
