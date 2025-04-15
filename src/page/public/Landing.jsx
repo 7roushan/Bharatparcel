@@ -334,6 +334,7 @@ function LandingPage() {
                   "& input": {
                     padding: "12px 20px",
                     fontSize: "1rem",
+                    color:"#000",
                   },
                 }}
               />
