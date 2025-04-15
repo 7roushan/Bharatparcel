@@ -43,7 +43,7 @@ function ServicesPage() {
   return (
     <Box
       sx={{
-        pt: { xs: 2, sm: 4, md: 6 },
+        pt: { xs: 2, sm: 6 },
         pb: { xs: 4, sm: 6 },
         px: { xs: 4, md: 17 },
       }}
