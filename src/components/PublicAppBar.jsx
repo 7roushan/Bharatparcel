@@ -22,7 +22,7 @@ const navLinks = [
   { to: "/about", label: "About" },
   { to: "/services", label: "Services" },
   { to: "/contact", label: "Contact" },
-  { to: "/employer", label: "Order" },
+  { to: "/order", label: "Order" },
 ];
 
 // Define multiple themes
@@ -151,13 +151,19 @@ const PublicAppBar = () => {
         }}
       >
         <TopBar scrolling={scrolling} />
-        <Toolbar sx={{ justifyContent: "space-between", px:{sx:4,md:10} }}>
+        <Toolbar
+          sx={{ justifyContent: "space-between", px: { sx: 4, md: 10 } }}
+        >
           {scrolling && (
-            <Typography  variant="h6" sx={{fontSize: { xs: "1rem", sm: "1.5rem" , md:"1.8rem" },
-            fontWeight: 700,
-            color: "#fff",
-            letterSpacing: "1px",
-           }}>
+            <Typography
+              variant="h6"
+              sx={{
+                fontSize: { xs: "1rem", sm: "1.5rem", md: "1.8rem" },
+                fontWeight: 700,
+                color: "#fff",
+                letterSpacing: "1px",
+              }}
+            >
               BPS
             </Typography>
           )}
@@ -182,9 +188,7 @@ const PublicAppBar = () => {
                       window.scrollTo(0, 0);
                     }}
                     sx={{
-                      color: isActive
-                        ? "#000000"
-                        : "#fff",
+                      color: isActive ? "#000000" : "#fff",
                       fontWeight: 600,
                       position: "relative",
                       cursor: "pointer",
@@ -238,10 +242,15 @@ const PublicAppBar = () => {
         anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
-        
-       
       >
-        <List sx={{ justifyContent:"center", width: 200 ,height:"100vh", backgroundColor : activeTheme.palette.primary.main }}>
+        <List
+          sx={{
+            justifyContent: "center",
+            width: 200,
+            height: "100vh",
+            backgroundColor: activeTheme.palette.primary.main,
+          }}
+        >
           {navLinks.map((link, i) => {
             const isActive = location.pathname === link.to;
             return (
@@ -256,9 +265,7 @@ const PublicAppBar = () => {
                 <ListItemText>
                   <Typography
                     sx={{
-                      color: isActive
-                        ? "#000"
-                        : "#fff",
+                      color: isActive ? "#000" : "#fff",
                       fontWeight: "bold",
                     }}
                   >
