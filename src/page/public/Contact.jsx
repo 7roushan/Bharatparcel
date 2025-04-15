@@ -371,7 +371,7 @@ const Contact = () => {
   };
 
   return (
-    <Box sx={{ bgcolor: "#F9FAFB"  }}>
+    <Box sx={{ bgcolor: "#F9FAFB" }}>
       {/* Hero Section */}
       {/* <Box
         sx={{
@@ -486,7 +486,7 @@ const Contact = () => {
       </Box>
 
       {/* Main Section */}
-      <Box sx={{ px: { xs: 4 , md: 17 }, py: { xs: 6, md: 10 } }}>
+      <Box sx={{ px: { xs: 4, md: 17 }, py: { xs: 6, md: 10 } }}>
         <Grid container spacing={6}>
           {/* Contact Form */}
           <Grid item xs={12} md={7}>
@@ -570,62 +570,61 @@ const Contact = () => {
           </Grid>
 
           {/* Contact Information */}
-          <Grid item xs={12} md={5} >
-            <Box ml={3}> 
-            <Typography
-              variant="h4"
-              sx={{ fontWeight: 700, color: "#1976D2", mb: 3 }}
-            >
-              Contact Information
-            </Typography>
+          <Grid item xs={12} md={5}>
+            <Box sx={{ ml: { md: 3, xs: 0 } }}>
+              <Typography
+                variant="h4"
+                sx={{ fontWeight: 700, color: "#1976D2", mb: 3 }}
+              >
+                Contact Information
+              </Typography>
 
-            <Card sx={{ p: 3, mb: 4, borderRadius: 2, boxShadow: 3 }}>
-              {[
-                { icon: <PhoneIcon />, text: "+91 7017866149" },
-                { icon: <EmailIcon />, text: "caarun@rediffmail.com" },
-                {
-                  icon: <LocationOnIcon />,
-                  text: "332, KUCHA GHASI RAM, FATEH PURI, CHANDNI CHOWK DELHI DL 110006",
-                },
-              ].map(({ icon, text }, idx) => (
-                <Box
-                  key={idx}
-                  sx={{ display: "flex", alignItems: "center", mb: 2 }}
-                >
-                  {React.cloneElement(icon, {
-                    sx: { color: "#1976D2", mr: 2 },
-                  })}
-                  <Typography variant="body1">{text}</Typography>
-                </Box>
-              ))}
-            </Card>
+              <Card sx={{ p: 3, mb: 4, borderRadius: 2, boxShadow: 3 }}>
+                {[
+                  { icon: <PhoneIcon />, text: "+91 7017866149" },
+                  { icon: <EmailIcon />, text: "caarun@rediffmail.com" },
+                  {
+                    icon: <LocationOnIcon />,
+                    text: "332, KUCHA GHASI RAM, FATEH PURI, CHANDNI CHOWK DELHI DL 110006",
+                  },
+                ].map(({ icon, text }, idx) => (
+                  <Box
+                    key={idx}
+                    sx={{ display: "flex", alignItems: "center", mb: 2 }}
+                  >
+                    {React.cloneElement(icon, {
+                      sx: { color: "#1976D2", mr: 2 },
+                    })}
+                    <Typography variant="body1">{text}</Typography>
+                  </Box>
+                ))}
+              </Card>
 
-            <Box
-              sx={{
-                height: "300px",
-                bgcolor: "#E0E0E0",
-                borderRadius: 2,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                mb: 4,
-                overflow: "hidden",
-              }}
-            >
-              <iframe
-                title="Google Map"
-                width="100%"
-                height="100%"
-                style={{ border: 0, borderRadius: "8px" }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.304215062335!2d77.22537445!3d28.6561594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd17d19e24bd%3A0x33e23bb3c913d871!2s332%2C%20Kucha%20Ghasiram%2C%20Fatehpuri%2C%20Chandni%20Chowk%2C%20Delhi%2C%20110006%2C%20India!5e0!3m2!1sen!2sin!4v1712056781234!5m2!1sen!2sin"
-              ></iframe>
-            </Box>
+              <Box
+                sx={{
+                  height: "300px",
+                  bgcolor: "#E0E0E0",
+                  borderRadius: 2,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  mb: 4,
+                  overflow: "hidden",
+                }}
+              >
+                <iframe
+                  title="Google Map"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, borderRadius: "8px" }}
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.304215062335!2d77.22537445!3d28.6561594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd17d19e24bd%3A0x33e23bb3c913d871!2s332%2C%20Kucha%20Ghasiram%2C%20Fatehpuri%2C%20Chandni%20Chowk%2C%20Delhi%2C%20110006%2C%20India!5e0!3m2!1sen!2sin!4v1712056781234!5m2!1sen!2sin"
+                ></iframe>
+              </Box>
             </Box>
           </Grid>
-
         </Grid>
       </Box>
 
