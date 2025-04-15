@@ -43,12 +43,12 @@ function ServicesPage() {
   return (
     <Box
       sx={{
-        pt: { xs: 2, sm: 6 },
-        pb: { xs: 4, sm: 6 },
+        // pt: { xs: 2, md: 6 },
+        pb: { xs: 4, md: 6 },
         px: { xs: 4, md: 17 },
       }}
     >
-      <Grid container spacing={4}>
+      <Grid container spacing={3}>
         {/* Left Section: Heading, Description, and Button */}
         <Grid item xs={12} md={4}>
           <Typography
