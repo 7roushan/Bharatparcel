@@ -216,11 +216,11 @@ const PublicAppBar = () => {
                 <MenuIcon />
               </IconButton>
 
-              {/* <Tooltip title="Change Theme">
+              <Tooltip title="Change Theme">
                 <IconButton onClick={cycleTheme}>
                   <ColorLens sx={{ color: "#fff" }} />
                 </IconButton>
-              </Tooltip> */}
+              </Tooltip>
             </Box>
           )}
 
