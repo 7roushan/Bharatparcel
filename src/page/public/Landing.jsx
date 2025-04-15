@@ -264,9 +264,9 @@ function LandingPage() {
               variant="h1"
               sx={{
                 fontWeight: 900,
-                fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
+                fontSize: { xs: "2.5rem", sm: "3rem", md: "4rem" },
                 textShadow: "4px 4px 8px rgba(0,0,0,0.6)",
-                mb: 3,
+                  mb: 3,
                  mt: { xs: 5 },
                 background: "linear-gradient(45deg, #e8ec14 30%, #d0f916 90%)",
                 WebkitBackgroundClip: "text",
