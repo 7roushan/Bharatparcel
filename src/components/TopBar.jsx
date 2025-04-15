@@ -140,14 +140,14 @@ function TopBar({ scrolling }) {
         // minHeight: { xs: 40, sm: 36 },
         // py: 0,
 
-        background: "linear-gradient(40deg, #1976d2, #42a5f5)",
+        background: "linear-gradient(40deg,rgb(94, 178, 247), rgb(94, 178, 247))",
         boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
         transition: "all 0.3s ease-in-out",
         // minHeight: { xs: 48, sm: 56 }, // Slightly taller for better presence
         py: 0.5,
       }}
     >
-      <Box sx={{ px: { xs: 2, sm: 3 , md: 4 } }}>
+      <Box sx={{ px: { xs: 2, sm: 3 , md: 5 } }}>
         <Toolbar
           disableGutters
           sx={{
@@ -156,18 +156,18 @@ function TopBar({ scrolling }) {
             alignItems: "center",
             minHeight: { xs: 36, sm: 36 },
             py: 0,
-            px: 0,
+            px:{sx:2,md:5}
           }}
         >
           {/* Logo */}
           <Typography
             variant="h6"
             sx={{
-              fontSize: { xs: "1rem", sm: "1.5rem" },
+              fontSize: { xs: "1rem", sm: "1.5rem" , md:"1.8rem" },
               fontWeight: 700,
               color: "#fff",
               letterSpacing: "1px",
-              lineHeight: 1,
+             
             }}
           >
             BPS

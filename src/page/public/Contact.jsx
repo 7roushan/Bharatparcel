@@ -1,5 +1,3 @@
-
-
 // import React from "react";
 // import {
 //   Box,
@@ -343,9 +341,7 @@
 //   );
 // };
 
-// export default Contact; 
-
-
+// export default Contact;
 
 import React from "react";
 import {
@@ -375,9 +371,9 @@ const Contact = () => {
   };
 
   return (
-    <Box sx={{ bgcolor: "#F9FAFB" }}>
+    <Box sx={{ bgcolor: "#F9FAFB"  }}>
       {/* Hero Section */}
-      <Box
+      {/* <Box
         sx={{
           position: "relative",
           width: "100vw",
@@ -398,7 +394,65 @@ const Contact = () => {
           },
         }}
       >
-        <Container sx={{ position: "relative", zIndex: 1 }}>
+        <Container sx={{ position: "relative", textAlign:"center", zIndex: 1 }}>
+          <Typography
+            variant="h2"
+            sx={{
+              color: "white",
+
+              fontWeight: 800,
+              fontSize: { xs: "2rem", sm: "3rem", md: "4rem" },
+              textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
+              "@media (max-width:600px) and (orientation:landscape)": {
+                fontSize: "1.5rem",
+              },
+            }}
+          >
+            Get in Touch
+          </Typography>
+          <Typography
+            variant="h6"
+            sx={{
+              color: "white",
+              mt: 2,
+
+              maxWidth: "700px",
+              fontSize: { xs: "1rem", sm: "1.25rem" },
+              "@media (max-width:600px) and (orientation:landscape)": {
+                fontSize: "0.9rem",
+              },
+            }}
+          >
+            We're here to assist with all your logistics needs. Reach out today!
+          </Typography>
+        </Container>
+      </Box> */}
+      <Box
+        sx={{
+          position: "relative",
+          width: "100vw",
+          height: { xs: "300px", md: "400px" },
+          backgroundImage: `url(${contactBanner})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center left",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center", // ✅ Add this to center horizontally
+          textAlign: "center", // ✅ Optional fallback
+          "&:after": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "rgba(0, 0, 0, 0.6)",
+          },
+        }}
+      >
+        <Container
+          sx={{ position: "relative", textAlign: "center", zIndex: 1 }}
+        >
           <Typography
             variant="h2"
             sx={{
@@ -419,6 +473,7 @@ const Contact = () => {
               color: "white",
               mt: 2,
               maxWidth: "700px",
+              mx: "auto", // ✅ centers the paragraph horizontally inside container
               fontSize: { xs: "1rem", sm: "1.25rem" },
               "@media (max-width:600px) and (orientation:landscape)": {
                 fontSize: "0.9rem",
@@ -431,19 +486,28 @@ const Contact = () => {
       </Box>
 
       {/* Main Section */}
-      <Container sx={{ py: { xs: 6, md: 10 } }}>
-        <Grid container spacing={4}>
+      <Box sx={{ px: { xs: 4 , md: 17 }, py: { xs: 6, md: 10 } }}>
+        <Grid container spacing={6}>
           {/* Contact Form */}
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" sx={{ fontWeight: 700, color: "#1976D2", mb: 3 }}>
+          <Grid item xs={12} md={7}>
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: 700, color: "#1976D2", mb: 3 }}
+            >
               Send Us a Message
             </Typography>
             <Typography variant="body1" sx={{ color: "#666", mb: 3 }}>
-              Have a question or need assistance? Fill out the form below, and our team will get back to you promptly.
+              Have a question or need assistance? Fill out the form below, and
+              our team will get back to you promptly.
             </Typography>
             <form onSubmit={handleSubmit(onSubmit)}>
               {[
-                { label: "First Name *", name: "firstName", type: "text", required: "First Name is required" },
+                {
+                  label: "First Name *",
+                  name: "firstName",
+                  type: "text",
+                  required: "First Name is required",
+                },
                 {
                   label: "Email *",
                   name: "email",
@@ -454,7 +518,12 @@ const Contact = () => {
                     message: "Invalid email address",
                   },
                 },
-                { label: "Subject *", name: "subject", type: "text", required: "Subject is required" },
+                {
+                  label: "Subject *",
+                  name: "subject",
+                  type: "text",
+                  required: "Subject is required",
+                },
               ].map(({ label, name, type, required, pattern = null }) => (
                 <TextField
                   key={name}
@@ -501,8 +570,12 @@ const Contact = () => {
           </Grid>
 
           {/* Contact Information */}
-          <Grid item xs={12} md={6}>
-            <Typography variant="h4" sx={{ fontWeight: 700, color: "#1976D2", mb: 3 }}>
+          <Grid item xs={12} md={5} >
+            <Box ml={3}> 
+            <Typography
+              variant="h4"
+              sx={{ fontWeight: 700, color: "#1976D2", mb: 3 }}
+            >
               Contact Information
             </Typography>
 
@@ -515,8 +588,13 @@ const Contact = () => {
                   text: "332, KUCHA GHASI RAM, FATEH PURI, CHANDNI CHOWK DELHI DL 110006",
                 },
               ].map(({ icon, text }, idx) => (
-                <Box key={idx} sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                  {React.cloneElement(icon, { sx: { color: "#1976D2", mr: 2 } })}
+                <Box
+                  key={idx}
+                  sx={{ display: "flex", alignItems: "center", mb: 2 }}
+                >
+                  {React.cloneElement(icon, {
+                    sx: { color: "#1976D2", mr: 2 },
+                  })}
                   <Typography variant="body1">{text}</Typography>
                 </Box>
               ))}
@@ -545,9 +623,11 @@ const Contact = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14013.304215062335!2d77.22537445!3d28.6561594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd17d19e24bd%3A0x33e23bb3c913d871!2s332%2C%20Kucha%20Ghasiram%2C%20Fatehpuri%2C%20Chandni%20Chowk%2C%20Delhi%2C%20110006%2C%20India!5e0!3m2!1sen!2sin!4v1712056781234!5m2!1sen!2sin"
               ></iframe>
             </Box>
+            </Box>
           </Grid>
+
         </Grid>
-      </Container>
+      </Box>
 
       {/* CTA */}
       <Box sx={{ py: 4, bgcolor: "#1976D2", textAlign: "center" }}>
@@ -586,4 +666,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

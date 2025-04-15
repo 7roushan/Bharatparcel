@@ -22,18 +22,7 @@ import { Container } from "@mui/material";
 function Home() {
   return (
     <>
-      {/* <LandingPage />
-    
-      <Looking />
-      <Advisory />
-      <Global/>
-      <Consulting />
-      <Industry />
-      <Workforce />
-      <Scroller/>
-      <Request />
-      <Googlemap/> */}
-
+     
       <LandingPage />
      
        <WelcomeSection />
@@ -43,9 +32,7 @@ function Home() {
       <WarehouseSection />
       <TrackingPage />
 
-      {/* <MostVisit/> */}
 
-      {/* <LogisticsSection /> */}
 
       
 

@@ -151,9 +151,13 @@ const PublicAppBar = () => {
         }}
       >
         <TopBar scrolling={scrolling} />
-        <Toolbar sx={{ justifyContent: "space-between", px: 1 }}>
+        <Toolbar sx={{ justifyContent: "space-between", px:{sx:4,md:10} }}>
           {scrolling && (
-            <Typography variant="h5" sx={{ color: "#fff", fontWeight: 700 }}>
+            <Typography  variant="h6" sx={{fontSize: { xs: "1rem", sm: "1.5rem" , md:"1.8rem" },
+            fontWeight: 700,
+            color: "#fff",
+            letterSpacing: "1px",
+           }}>
               BPS
             </Typography>
           )}
@@ -179,12 +183,12 @@ const PublicAppBar = () => {
                     }}
                     sx={{
                       color: isActive
-                        ? activeTheme.palette.secondary.main
+                        ? "#000000"
                         : "#fff",
                       fontWeight: 600,
                       position: "relative",
                       cursor: "pointer",
-                      "&:hover": { color: activeTheme.palette.secondary.main },
+                      "&:hover": { color: "#000000" },
                       "&:after": {
                         content: '""',
                         position: "absolute",
@@ -192,7 +196,7 @@ const PublicAppBar = () => {
                         left: 0,
                         width: isActive ? "100%" : "0%",
                         height: "2px",
-                        backgroundColor: activeTheme.palette.secondary.main,
+                        // backgroundColor: activeTheme.palette.secondary.main,
                         transition: "width 0.3s",
                       },
                       "&:hover:after": { width: "100%" },
@@ -212,11 +216,11 @@ const PublicAppBar = () => {
                 <MenuIcon />
               </IconButton>
 
-              <Tooltip title="Change Theme">
+              {/* <Tooltip title="Change Theme">
                 <IconButton onClick={cycleTheme}>
                   <ColorLens sx={{ color: "#fff" }} />
                 </IconButton>
-              </Tooltip>
+              </Tooltip> */}
             </Box>
           )}
 
@@ -234,8 +238,10 @@ const PublicAppBar = () => {
         anchor="left"
         open={drawerOpen}
         onClose={() => setDrawerOpen(false)}
+        
+       
       >
-        <List sx={{ width: 200 }}>
+        <List sx={{ justifyContent:"center", width: 200 ,height:"100vh", backgroundColor : activeTheme.palette.primary.main }}>
           {navLinks.map((link, i) => {
             const isActive = location.pathname === link.to;
             return (
@@ -251,8 +257,8 @@ const PublicAppBar = () => {
                   <Typography
                     sx={{
                       color: isActive
-                        ? activeTheme.palette.secondary.main
-                        : "#000",
+                        ? "#000"
+                        : "#fff",
                       fontWeight: "bold",
                     }}
                   >

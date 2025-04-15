@@ -41,7 +41,7 @@ const services = [
 
 function ServicesPage() {
   return (
-    <Container sx={{ py: 8  }}>
+    <Box  sx={{ py: 8 ,px: { xs: 4 , md: 17}  }}>
       <Grid container spacing={4}>
         {/* Left Section: Heading, Description, and Button */}
         <Grid item xs={12} md={4}>
@@ -135,7 +135,7 @@ function ServicesPage() {
           </Grid>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 }
 

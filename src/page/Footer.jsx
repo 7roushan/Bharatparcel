@@ -21,7 +21,7 @@ const Footer = () => {
         bgcolor: "#1a1a1a",
         color: "#fff",
         pt: 6,
-        px: { xs: 2, sm: 4, md: 6 },
+        px: { xs: 3, sm: 3, md: 10 },
       }}
     >
       <Grid

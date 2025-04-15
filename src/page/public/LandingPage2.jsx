@@ -326,8 +326,8 @@ const LandingPage2 = () => {
       <WelcomeSection />
 
       {/* Features Section */}
-      <Container sx={{ backgroundColor: "white", py: { xs: 6, md: 10 } }}>
-        <Grid container spacing={4} justifyContent="center">
+      <Box sx={{ backgroundColor: "white", py: { xs: 6, md: 10 } ,px: { xs: 4 , md: 17}  }}>
+        <Grid container spacing={6}  justifyContent="center">
           {sections.map((section, index) => (
             <Grid item xs={12} sm={6} md={4} key={index}>
               <Box
@@ -397,7 +397,7 @@ const LandingPage2 = () => {
             </Grid>
           ))}
         </Grid>
-      </Container>
+      </Box>
 
       {/* Call to Action Section */}
       <Box

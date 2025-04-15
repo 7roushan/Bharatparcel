@@ -395,8 +395,8 @@ const TrackingPage = () => {
     <Box
       sx={{
         pt: { xs: 4, sm: 5 },
-        px: { xs: 2, sm: 4, md: 8 },
-        mx:  { xs: 1.5, sm: 2, md: 4 },
+        px: { xs: 4, sm: 4, md: 10 , lg:15 },
+         mx:  { xs: 1.5, sm: 2, md: 4 },
         mb: { xs: 1.5, sm: 2, md: 4 },
         borderRadius: 4,
         background:
