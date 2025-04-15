@@ -86,12 +86,12 @@ const RoundedTextField = styled(TextField)(({ theme }) => ({
     borderRadius: theme.spacing(2),
     backgroundColor: "#F1EFEC",
     "& input": {
-      color: "#f8faff",
+      color:"#000000",
       paddingTop: "8px",
       paddingBottom: "10px",
     },
     "& textarea": {
-      color: "#f8faff",
+      color: "#000000",
       paddingTop: "6px",
       paddingBottom: "6px",
     },
@@ -305,7 +305,7 @@ const Order = () => {
                     >
                       {stations.map((station) => (
                         <MenuItem key={station} value={station}>
-                          {station}
+                        {station}
                         </MenuItem>
                       ))}
                     </Select>
@@ -313,44 +313,7 @@ const Order = () => {
                 </Grid>
               ))}
 
-              {/* {["Booking Date", "Delivery Date"].map((label) => (
-                <Grid item xs={12} sm={6} key={label}>
-                  <RoundedTextField
-                    fullWidth
-                    type="date"
-                    label={label}
-                    name={label.replace(/ /g, "")}
-                    variant="outlined"
-                    InputLabelProps={{ shrink: true }}
-                    placeholder="dd-mm-yyyy"
-                    sx={{
-                      backgroundColor: "rgba(255, 255, 255, 0.08)",
-                      borderRadius: 2,
-                      input: {
-                        color: "black",
-                        padding: "12px",
-                        borderRadius: 2,
-                        textAlign: "center", // center the text
-                      },
-                      label: {
-                        color: "rgb(60, 53, 53)",
-                      },
-                      "& .MuiOutlinedInput-root": {
-                        "& fieldset": {
-                          borderColor: "rgba(52, 30, 30, 0.79)",
-                        },
-                        "&:hover fieldset": {
-                          borderColor: "black",
-                        },
-                        "&.Mui-focused fieldset": {
-                          borderColor: "primary.main",
-                        },
-                      },
-                    }}
-                    onFocus={(e) => e.target.showPicker?.()} // for browser compatibility
-                  />
-                </Grid>
-              ))} */}
+
 
               {["Booking Date", "Delivery Date"].map((label) => (
                 <Grid item xs={12} sm={6} key={label}>
